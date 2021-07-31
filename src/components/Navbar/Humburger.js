@@ -64,7 +64,7 @@ const Humburger = ({ state, setState }) => {
                         </li>
                         <li>
                             <Link to='/contact'>
-                                &lt;Connect /&gt;
+                                &lt;Contact Me /&gt;
                             </Link>
                         </li>
                     </ul>
@@ -161,6 +161,7 @@ const Container = styled.div`
         & > li {
             list-style: none;
             font-size: 8rem;
+            margin: 2rem 0;
             line-height: 14rem;
             font-weight: 700;
             cursor: pointer;

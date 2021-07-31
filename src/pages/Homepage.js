@@ -10,6 +10,7 @@ const Homepage = () => {
 
     useEffect(() => {
         Aos.init({ duration: 2000 })
+        document.title = 'Mukul Rajpoot Portfolio'
     }, [])
 
     return (
@@ -19,7 +20,6 @@ const Homepage = () => {
                     <h3 data-aos="flip-up" data-aos-duration="1000">👋 I'm</h3>
                     <h1 data-aos="flip-up" data-aos-delay="500" data-aos-duration="1000">MUKUL RAJPOOT</h1>
                     <h3 data-aos="flip-up" data-aos-delay="1000" data-aos-duration="1000">Web Developer who speak Code so you don't have to</h3>
-                    <h6 data-aos="flip-up" data-aos-delay="1500" data-aos-duration="1000">I bring together Creativity and art to create brand and website projects that makes difference in your business.</h6>
                     <Button text="Contact" />
                 </LeftHero>
             </Container>
