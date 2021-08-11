@@ -45,7 +45,7 @@ const Homepage = () => {
                     <h1 data-aos="flip-up" data-aos-delay="500" data-aos-duration="1000">MUKUL RAJPOOT</h1>
                     <h3 data-aos="flip-up" data-aos-delay="1000" data-aos-duration="1000">Web Developer who speak Code so you don't have to</h3>
                     <Button text="Contact" />
-                    <img src="/images/pose/pose_m18.png" alt="" />
+                    <img data-aos="zoom-in" data-aos-duration="2000" src="/images/pose/pose_m18.png" alt="" />
                 </LeftHero>
             </Container>
 
@@ -204,6 +204,7 @@ const Col = styled.div`
     width: 50%;
     min-height: max-content;
     margin: 2rem;
+    background: #fff;
     display: flex;
     flex-direction: column;
 
@@ -212,6 +213,11 @@ const Col = styled.div`
         font-weight: 400;
         margin: 2rem;
         margin-bottom: 0;
+    }
+
+    & > img {
+        width: 100%;
+        height: auto;
     }
 
     & > h2 {
