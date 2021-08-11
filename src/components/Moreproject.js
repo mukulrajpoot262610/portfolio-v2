@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import styled from 'styled-components'
-import ImageReveal from './ImageReveal'
 
-const Project = ({ height }) => {
+const Moreproject = ({ height }) => {
+
+    useEffect(() => {
+        Aos.init({ duration: 2000 })
+    }, [])
 
     return (
         <>
-            <ImageReveal height={height} text='Projects 2' />
-            <Wrapper>
+            <Wrapper data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
                 <Info>
                     <h1>Hello</h1>
                     <h2>Website</h2>
@@ -67,5 +71,4 @@ const Circle = styled.div`
         }
     }
 `
-
-export default Project
+export default Moreproject

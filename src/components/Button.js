@@ -6,11 +6,11 @@ import styled from 'styled-components'
 const Button = ({ text }) => {
 
     useEffect(() => {
-        Aos.init({ duration: 2000 })
+        Aos.init({ duration: 1000 })
     }, [])
 
     return (
-        <Btn data-aos="flip-up" data-aos-delay="2000">
+        <Btn data-aos="flip-up" data-aos-delay="1500">
             <h1>... {text}</h1>
         </Btn>
     )

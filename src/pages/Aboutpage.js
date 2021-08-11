@@ -1,14 +1,18 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import Footer from '../components/Footer'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
 const Aboutpage = () => {
 
-    useEffect(() => {
-        Aos.init({ duration: 2000 })
+    const [time, setTime] = useState(1000)
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        Aos.init({ duration: 2000 })
+        if (window.location.pathname === '/') {
+            setTime(100)
+        }
         document.title = 'Mukul Rajpoot -- About'
     }, [])
 
@@ -16,17 +20,20 @@ const Aboutpage = () => {
         <About>
             <Container>
                 <Design>
-                    <h1 data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1000">Mukul Rajpoot</h1>
-                    <h2 data-aos="fade-right" data-aos-delay="1000" data-aos-duration="1000">&lt;About /&gt;</h2>
+                    <h1 data-aos="fade-left" data-aos-delay={time} data-aos-duration="1000">Mukul Rajpoot</h1>
+                    <h2 data-aos="fade-right" data-aos-delay={time} data-aos-duration="1000">&lt;About /&gt;</h2>
+                    <img src="/images/pose/pose_m12.png" alt="" />
                 </Design>
-                <h3 data-aos="fade-up" data-aos-delay="2000" data-aos-duration="1000">I am a full-stack creative developer based in Barielly, India. I am a Computer Science graduate and did some coursework to the awesome world of designing digital interfaces and products.</h3>
-                <h4 data-aos="fade-up" data-aos-delay="2500" data-aos-duration="1000"> I enjoy using my skill-set to empower people to accomplish their goals.
+                <h3 data-aos="fade-up" data-aos-delay={2 * time} data-aos-duration="1000">I am a full-stack creative developer based in Barielly, India. I am a Computer Science graduate and did some coursework to the awesome world of designing digital interfaces and products.</h3>
+                <h4 data-aos="fade-up" data-aos-delay={2.5 * time} data-aos-duration="1000"> I enjoy using my skill-set to empower people to accomplish their goals.
                     My development stack is focused on performance & accessibility with delightful interactions. I create lighting fast WebApps and Websites using <span>MERN</span> Stack with the help of NextJS.</h4>
             </Container>
+
             <Container>
                 <Design2>
                     <h1 data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">ToolBox</h1>
                     <h2 data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">TECH</h2>
+                    <img src="/images/pose/pose_m14.png" alt="" />
                 </Design2>
                 <ToolBox>
                     <Circle data-aos="zoom-in" data-aos-delay="3500" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
@@ -45,6 +52,10 @@ const Aboutpage = () => {
                         <i className="fab fa-react"></i>
                         <span>REACT</span>
                     </Circle>
+                    <Circle data-aos="zoom-in" data-aos-delay="3700" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
+                        <img src="/images/redux.svg" alt="" />
+                        <span>REDUX</span>
+                    </Circle>
                     <Circle data-aos="zoom-in" data-aos-delay="4100" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
                         <i className="fab fa-node-js"></i>
                         <span>NODEJS</span>
@@ -61,14 +72,18 @@ const Aboutpage = () => {
                         <i className="fas fa-database"></i>
                         <span>MONGODB</span>
                     </Circle>
+                    <Circle data-aos="zoom-in" data-aos-delay="4700" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
+                        <img src="/images/nextjs.svg" alt="" />
+                        <span>NEXTJS</span>
+                    </Circle>
                     <Circle data-aos="zoom-in" data-aos-delay="4900" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
                         <i className="fab fa-bootstrap"></i>
                         <span>BOOTSTRAP</span>
                     </Circle>
-                    <Circle data-aos="zoom-in" data-aos-delay="5100" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
+                    {/* <Circle data-aos="zoom-in" data-aos-delay="5100" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
                         <i className="fab fa-docker"></i>
                         <span>DOCKER</span>
-                    </Circle>
+                    </Circle> */}
                     <Circle data-aos="zoom-in" data-aos-delay="5300" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
                         <i className="fab fa-figma"></i>
                         <span>FIGMA</span>
@@ -79,7 +94,6 @@ const Aboutpage = () => {
                     </Circle>
                 </ToolBox>
             </Container>
-            <Footer />
         </About>
     )
 }
@@ -87,6 +101,7 @@ const Aboutpage = () => {
 const About = styled.div`
     width: 100%;
     min-height: 100vh;
+    overflow: hidden;
 `;
 
 const Circle = styled.div`
@@ -101,6 +116,11 @@ const Circle = styled.div`
     border-radius: 50%;
     cursor: pointer;
     transition: all .2s ease-in-out;
+
+    & > img {
+        height: auto;
+        width: 50%;
+    }
 
     & > i {
         font-size: 3rem;
@@ -127,11 +147,18 @@ const Design = styled.div`
         }
     }
 
+    & > img {
+        width: 50%;
+        position: absolute;
+        right: -20%;
+        height: auto;
+    }
+
     & > h1 {
         font-size: 15rem;
         font-weight: 500;
         position: absolute;
-        z-index: 0;
+        z-index: 2;
         bottom: 10%;
         left: 0%;
 
@@ -221,7 +248,7 @@ const Design2 = styled(Design)`
         font-size: 15rem;
         font-weight: 500;
         position: absolute;
-        z-index: 0;
+        z-index: 2;
         left: 0%;
 
         @media (max-width: 768px) {

@@ -1,14 +1,38 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Button from '../components/Button'
-import Footer from '../components/Footer'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import { isMobile } from 'react-device-detect';
+import Project from '../components/Project'
+import { Link } from 'react-router-dom'
+import Moreproject from '../components/Moreproject'
 
 
 const Homepage = () => {
 
+    const [offesetY, setOffsetY] = useState(0);
+
+    const handleScroll = () => {
+        if (isMobile) {
+            setOffsetY(0);
+        } else {
+            setOffsetY(window.pageYOffset);
+        }
+    };
+
     useEffect(() => {
+        if (isMobile) return
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            if (isMobile) return
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
         Aos.init({ duration: 2000 })
         document.title = 'Mukul Rajpoot Portfolio'
     }, [])
@@ -21,32 +45,133 @@ const Homepage = () => {
                     <h1 data-aos="flip-up" data-aos-delay="500" data-aos-duration="1000">MUKUL RAJPOOT</h1>
                     <h3 data-aos="flip-up" data-aos-delay="1000" data-aos-duration="1000">Web Developer who speak Code so you don't have to</h3>
                     <Button text="Contact" />
+                    <img src="/images/pose/pose_m18.png" alt="" />
                 </LeftHero>
             </Container>
-            <Footer />
+
+            <Container2>
+                <h1>&lt; Selected</h1>
+                <h1>Projects  /&gt;</h1>
+                <Row>
+                    <Col style={{
+                        transform: `translateY(${offesetY * 0.08}px)`,
+                    }}>
+                        <Project height="50vh" />
+                    </Col>
+                    <Col style={{
+                        transform: `translateY(-${offesetY * 0.05}px)`,
+                    }}>
+                        <Project height="60vh" />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col style={{
+                        transform: `translateY(${offesetY * 0.08}px)`,
+                    }}>
+                        <Project height="60vh" />
+                    </Col>
+                    <Col style={{
+                        transform: `translateY(-${offesetY * 0.05}px)`,
+                    }}>
+                        <Project height="50vh" />
+                    </Col>
+
+                </Row>
+            </Container2>
+
+            <ContainerA>
+                <Design>
+                    <h1 data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">Mukul Rajpoot</h1>
+                    <h2 data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">&lt;About /&gt;</h2>
+                </Design>
+                <Circle data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
+                    <Link to="/about">
+                        <h2>About Me</h2>
+                    </Link>
+                </Circle>
+                <h3 data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">I am a full-stack creative developer based in Barielly, India. I am a Computer Science graduate and did some coursework to the awesome world of designing digital interfaces and products.</h3>
+                <h4 data-aos="fade-up" data-aos-delay="450" data-aos-duration="1000"> I enjoy using my skill-set to empower people to accomplish their goals.
+                    My development stack is focused on performance & accessibility with delightful interactions. I create lighting fast WebApps and Websites using <span>MERN</span> Stack with the help of NextJS.</h4>
+            </ContainerA>
+
+            <Container3>
+                <Wrapper>
+                    <h1>I’m currently available for freelance projects. <span>Let’s work together</span> to create something worth sharing.
+                    </h1>
+                    <img src="/images/pose/pose_m13.png" alt="" />
+                </Wrapper>
+            </Container3>
+
+            <Container>
+                <h1>&lt; More Works /&gt;</h1>
+                <Row>
+                    <Col>
+                        <img src="/images/pose/pose_m14.png" alt="" />
+                    </Col>
+                    <Col>
+                        <Moreproject />
+                        <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
+                        <Moreproject />
+                        <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
+                        <Moreproject />
+                        <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
+                        <Moreproject />
+                        <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
+                        <Moreproject />
+                    </Col>
+                </Row>
+            </Container>
+
+            <Container3>
+                <Wrapper>
+                    <h1>Any fool can write code that a computer can understand. <span>Good</span> programmers write code that humans can understand</h1>
+                    <h3>-Martin Fowler</h3>
+                </Wrapper>
+            </Container3>
         </Home>
     )
 }
 
+const Circle = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    background-color: #191919;
+
+    & > a > h2 {
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            transform: rotate(-30deg);
+            color: var(--yellow);
+        }
+    }
+`
 const Home = styled.div`
     width: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
     position: relative;
-`;
-
-
-const Container = styled.div`
     overflow: hidden;
+`;
+const Container = styled.div`
+    /* overflow: hidden; */
     width: 100%;
     max-width: 1280px;
-    min-height: 120vh;
+    min-height: 90vh;
     margin: 0 auto;
     position: relative;
     padding: 2rem;
     z-index: 0;
 
     & > h1 {
-        color: #fff;
+        color: #191919;
         font-size: 7rem;
         font-weight: 300;
     }
@@ -57,23 +182,187 @@ const Container = styled.div`
         font-size: 7rem;
         margin-left: 5rem;
     }
+`;
+const Container2 = styled(Container)`
+    max-width: 1580px;
+    width: 100%;
+    padding: 10rem 2rem;
+    `
+const Row = styled.div`
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    & > .second {
-        position: absolute;
-        bottom: 10%;
-        right: 0;
-        z-index: -10;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+`
+const Col = styled.div`
+    flex: 1;
+    width: 50%;
+    min-height: max-content;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
 
-        @media (max-width: 540px) {
-            left: 40%;
-        }
+    & > h1 {
+        font-size: 5rem;
+        font-weight: 400;
+        margin: 2rem;
+        margin-bottom: 0;
+    }
 
-        @media (max-width: 420px) {
-            left: 5%;
-            bottom: 5%;
+    & > h2 {
+        color: gray;
+        font-size: 2rem;
+        font-weight: 400;
+        margin: 0 2rem;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+`
+const ContainerA = styled.div`
+    overflow: hidden;
+    width: 100%;
+    max-width: 1280px;
+    min-height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    padding: 5rem;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    @media (max-width: 1024px) {
+        min-height: 30vh;
+    }
+
+    & > h3 {
+        margin-left: auto;
+        margin-top: 5rem;
+        width: 60%;
+        text-align: left;
+        font-weight: 400;
+        font-size: 3rem;
+
+        @media (max-width: 768px) {
+            margin: 2rem 0;
+            width: 90%;
         }
     }
+
+    & > h4 {
+        margin: 4rem 0;
+        margin-left: auto;
+        width: 60%;
+        text-align: left;
+        font-weight: 400;
+        font-size: 2rem;
+
+        & > span {
+            color: var(--green);
+        }
+
+        @media (max-width: 768px) {
+            margin: 2rem 0;
+            width: 90%;
+        }
+    }
+
+    & > i {
+        font-size: 3rem;
+    }
 `;
+const Design = styled.div`
+    position: relative;
+    overflow: hidden;
+    height: 50vh;
+
+    @media (max-width: 1024px) {
+        height: 30vh;
+    }
+
+    & > h2 {
+        color: transparent;
+        font-size: 20rem;
+        position: absolute;
+        z-index: -3;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: var(--yellow);
+        bottom: 10%;
+        left: 0%;
+
+        @media (max-width: 768px) {
+            font-size: 13rem;
+        }
+    }
+
+    & > h1 {
+        font-size: 15rem;
+        font-weight: 500;
+        position: absolute;
+        z-index: 0;
+        bottom: 10%;
+        left: 0%;
+
+        @media (max-width: 768px) {
+            line-height: 13rem;
+        }
+    }
+`
+
+
+const Container3 = styled(Container)`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+`
+
+
+const Wrapper = styled.div`
+    padding: 3rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    & > h3 {
+        margin-left: auto;
+        font-size: 3rem;
+    }
+
+    & > img {
+        position: absolute;
+        top: 10%;
+        left: 80%;
+        height: auto;
+        width: 50%;
+
+        @media (max-width: 768px) {
+            width: 60%;
+            top: 20%
+        }
+    }
+
+    & > h1 {
+        color: #191919;
+        font-size: 7rem;
+        font-weight: 300;
+
+        & >  span {
+            font-weight: 400;
+            color: var(--green);
+        }
+    }
+`
 
 
 const LeftHero = styled.div`
@@ -84,6 +373,7 @@ const LeftHero = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    position: relative;
 
     & > h1 {
         font-size: 4rem;
@@ -96,13 +386,20 @@ const LeftHero = styled.div`
 
     & > h3 {
         font-size: 7rem;
+        max-width: 80%;
         font-family: 'Otomanopee One', sans-serif;
+    }
+
+    & > img {
+        position: absolute;
+        width: 50%;
+        height: auto;
+        left: 70%;
     }
 
     & > h6 {
         font-size: 1.5rem;
     }
 `
-
 
 export default Homepage

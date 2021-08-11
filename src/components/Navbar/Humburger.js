@@ -22,7 +22,7 @@ const Humburger = ({ state, setState }) => {
             // If menu is closed and we want to open it.
             staggerRevealClose(reveal3, reveal2, reveal1);
             // Set menu to display none
-            gsap.to(menuLayer, { duration: 1, css: { display: "none" } });
+            gsap.to(menuLayer, { duration: 1.5, css: { display: "none" } });
         } else if (
             state.clicked === true ||
             (state.clicked === true && state.initial === null)

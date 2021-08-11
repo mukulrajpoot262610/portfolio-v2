@@ -26,18 +26,18 @@ export const staggerRevealClose = (node1, node2, node3) => {
   });
 };
 
-// // STAGGER THE LINKS TO APPEAR
-// export const staggerText = (node1, node2, node3) => {
-//   gsap.from([node1, node2, node3], {
-//     duration: 0.8,
-//     y: 100,
-//     delay: 0.1,
-//     ease: "power3.inOut",
-//     stagger: {
-//       amount: 0.3
-//     }
-//   });
-// };
+// STAGGER THE LINKS TO APPEAR
+export const staggerText = (node1, node2, node3) => {
+  gsap.from([node1, node2, node3], {
+    duration: 0.8,
+    y: 100,
+    delay: 0.1,
+    ease: "power3.inOut",
+    stagger: {
+      amount: 0.3
+    }
+  });
+};
 
 // Fade up for the additonal info on our menu
 export const fadeInUp = node => {
@@ -67,36 +67,5 @@ export const handleHoverExit = e => {
     y: -3,
     skewX: 0,
     ease: "power1.inOut"
-  });
-};
-
-// adds city image once you hover on
-export const handleCity = (city, target) => {
-  gsap.to(target, {
-    duration: 0,
-    background: `url(${city}) center center`
-  });
-  gsap.to(target, {
-    duration: 0.4,
-    opacity: 1,
-    ease: "power3.inOut"
-  });
-  gsap.from(target, {
-    duration: 0.4,
-    skewY: 2,
-    transformOrigin: "right top"
-  });
-};
-
-// Removes the city image once you hover off
-export const handleCityReturn = target => {
-  gsap.to(target, {
-    duration: 0,
-    skewY: 0
-  });
-  gsap.to(target, {
-    duration: 0.4,
-    opacity: 0,
-    skewY: 0
   });
 };

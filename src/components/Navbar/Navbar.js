@@ -83,7 +83,7 @@ const Nav = styled.nav`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0 5rem;
+    padding: 0 8rem;
     color: #fff;
     transition: all .4s ease-in-out;
 
@@ -98,7 +98,7 @@ const Logo = styled.div`
         transition: all 1.5s ease-in-out;
         font-family: 'Fuggles', cursive;
         font-weight: 600;
-        font-size: 3.5rem;
+        font-size: 5rem;
         /* color: var(--dark); */
     }
 
@@ -123,7 +123,7 @@ const Menu = styled.div`
         /* color: #191919; */
         background: none;
         border: none;
-        font-size: 2rem;
+        font-size: 3rem;
         font-family: inherit;
     }
 `
