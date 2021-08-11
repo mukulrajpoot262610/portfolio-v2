@@ -9,7 +9,7 @@ const Workpage = () => {
                     <h1 data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1000">Projects</h1>
                     <h2 data-aos="fade-right" data-aos-delay="1000" data-aos-duration="1000">&lt;Work /&gt;</h2>
                 </Design>
-                <h3 data-aos="fade-up" data-aos-delay="2000" data-aos-duration="1000">A collection of more designs and front-end coding. These are a mix of freelance, contest, practice and side projects.</h3>
+                <h3 data-aos="fade-up" data-aos-delay="2000" data-aos-duration="1000">A collection of front-end, full-stack coding. These are a mix of freelance, contest, practice and side projects.</h3>
             </Container>
         </Work>
     )

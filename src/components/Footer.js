@@ -23,7 +23,7 @@ const Footer = () => {
             </LeftFoot>
             <hr data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" />
             <LeftFoot>
-                <h1 data-aos="flip-up" data-aos-delay="700" data-aos-duration="1000">Portfolio 2021 <br />Designed and developed by me</h1>
+                <h1 data-aos="flip-up" data-aos-delay="700" data-aos-duration="1000">Portfolio 2021 <br />Designed and developed by me with ❤</h1>
             </LeftFoot>
         </Foot>
     )

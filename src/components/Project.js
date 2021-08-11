@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Project = ({ height, image, position }) => {
+const Project = ({ height, image, position, name }) => {
 
     return (
         <>
             <img src={image} alt="" style={{ height: height, objectFit: 'cover', width: '100%', objectPosition: position }} />
             <Wrapper>
                 <Info>
-                    <h1>Hello</h1>
+                    <h1>{name}</h1>
                     <h2>Website</h2>
                 </Info>
                 <Circle>

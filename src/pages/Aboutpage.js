@@ -82,19 +82,31 @@ const Aboutpage = () => {
                         <i className="fab fa-bootstrap"></i>
                         <span>BOOTSTRAP</span>
                     </Circle>
-                    {/* <Circle data-aos="zoom-in" data-aos-delay="5100" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
-                        <i className="fab fa-docker"></i>
-                        <span>DOCKER</span>
-                    </Circle> */}
+                    <Circle data-aos="zoom-in" data-aos-delay="5100" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
+                        <i class="fab fa-wordpress"></i>
+                        <span>WORDPRESS</span>
+                    </Circle>
                     <Circle data-aos="zoom-in" data-aos-delay="5300" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
                         <i className="fab fa-figma"></i>
                         <span>FIGMA</span>
                     </Circle>
                     <Circle data-aos="zoom-in" data-aos-delay="5500" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
-                        <i className="fab fa-python"></i>
-                        <span>PYTHON</span>
+                        <i class="fab fa-aws"></i>
+                        <span>AWS</span>
                     </Circle>
                 </ToolBox>
+            </Container>
+
+            <Container>
+                <Design2>
+                    <h1 data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">Why me?</h1>
+                    <h2 data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">About Me</h2>
+                    <img src="/images/pose/pose_m22.png" alt="" />
+                    <BG style={{ backgroundColor: '#E5F1F8', top: '10%', left: '57%' }}></BG>
+                </Design2>
+                <h4>There’s nothing I enjoy more than developing good websites and webApps for Cool people. I believe that people should do things they are good at or in which their <span style={{ color: 'crimson' }}>Hearts</span> lie. That's why I choose freelance web development as my career.</h4>
+                <h4>I’ve spent many years trying to perfect what I do and while I’ll never be perfect, I do my best to come close.</h4>
+                <h3>If you’ve got a project you’d like to work on with me just get in touch and we can get to work!</h3>
             </Container>
         </About>
     )
@@ -122,6 +134,10 @@ const Circle = styled.div`
     & > img {
         height: auto;
         width: 50%;
+    }
+
+    & > span {
+        font-size: 1rem;
     }
 
     & > i {
@@ -177,7 +193,7 @@ const Container = styled.div`
     min-height: 100vh;
     margin: 0 auto;
     position: relative;
-    padding: 5rem;
+    /* padding: 5rem; */
     z-index: 0;
     display: flex;
     justify-content: center;
@@ -188,6 +204,7 @@ const Container = styled.div`
     }
 
     & > h3 {
+        padding: 0 5rem;
         margin-left: auto;
         margin-top: 5rem;
         width: 60%;
@@ -202,6 +219,7 @@ const Container = styled.div`
     }
 
     & > h4 {
+        padding: 0 5rem;
         margin: 4rem 0;
         margin-left: auto;
         width: 60%;
@@ -210,6 +228,7 @@ const Container = styled.div`
         font-size: 2rem;
 
         & > span {
+            font-weight: 700;
             color: var(--green);
         }
 
@@ -226,6 +245,7 @@ const Container = styled.div`
 
 const Design2 = styled(Design)`
     height: 30vh;
+    padding: 0 5rem;
 
     @media (max-width: 768px) {
         height: 20vh;
@@ -265,10 +285,12 @@ const ToolBox = styled.div`
     flex-wrap: wrap;
     margin-left: auto;
     width: 60%;
-    margin-bottom: 5rem;
+    margin: 5rem 0;
 
     @media (max-width: 768px) {
         width: 100%;
+        justify-content: center;
+        align-items: center;
     }
 `
 

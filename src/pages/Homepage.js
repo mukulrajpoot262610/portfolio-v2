@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import Button from '../components/Button'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { isMobile } from 'react-device-detect';
@@ -32,7 +31,7 @@ const Homepage = () => {
     }, []);
 
     useEffect(() => {
-        window.scrollTo(0, 0)
+        // window.scrollTo(0, 0)
         Aos.init({ duration: 2000 })
         document.title = 'Mukul Rajpoot Portfolio'
     }, [])
@@ -41,10 +40,10 @@ const Homepage = () => {
         <Home>
             <Container>
                 <LeftHero>
-                    <h3 data-aos="flip-up" data-aos-duration="1000">Hi I'm</h3>
+                    <h3 data-aos="flip-up" data-aos-duration="1000">Hey, I'm</h3>
                     <h1 data-aos="flip-up" data-aos-delay="500" data-aos-duration="1000">MUKUL RAJPOOT</h1>
-                    <h3 data-aos="flip-up" data-aos-delay="1000" data-aos-duration="1000">Web Developer who speak Code so you don't have to</h3>
-                    <Button text="Contact" />
+                    <h3 data-aos="flip-up" data-aos-delay="1000" data-aos-duration="1000">A web designer + developer <br /> from India.</h3>
+                    {/* <Button text="Contact" /> */}
                     <BG style={{ backgroundColor: '#FEECEA' }}></BG>
                     <img data-aos="zoom-in" data-aos-duration="2000" src="/images/pose/pose_m18.png" alt="" />
                 </LeftHero>
@@ -57,24 +56,24 @@ const Homepage = () => {
                     <Col style={{
                         transform: `translateY(${offesetY * 0.08}px)`,
                     }}>
-                        <Project height="50vh" image="/images/1.jpg" position='left' />
+                        <Project height="50vh" image="/images/1.jpg" position='left' name='Netflix Clone' />
                     </Col>
                     <Col style={{
                         transform: `translateY(-${offesetY * 0.05}px)`,
                     }}>
-                        <Project height="60vh" image="/images/3.jpg" position='left' />
+                        <Project height="60vh" image="/images/3.jpg" position='left' name='Dev.to Clone' />
                     </Col>
                 </Row>
                 <Row>
                     <Col style={{
                         transform: `translateY(${offesetY * 0.08}px)`,
                     }}>
-                        <Project height="60vh" image="/images/2.jpg" position='left' />
+                        <Project height="60vh" image="/images/2.jpg" position='left' name='Netflix Clone' />
                     </Col>
                     <Col style={{
                         transform: `translateY(-${offesetY * 0.05}px)`,
                     }}>
-                        <Project height="50vh" image="/images/4.jpg" position='left' />
+                        <Project height="50vh" image="/images/4.jpg" position='left' name='Netflix Clone' />
                     </Col>
 
                 </Row>
@@ -90,9 +89,9 @@ const Homepage = () => {
                         <h2>About Me</h2>
                     </Link>
                 </Circle>
-                <h3 data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">I am a full-stack creative developer based in Barielly, India. I am a Computer Science graduate and did some coursework to the awesome world of designing digital interfaces and products.</h3>
+                <h3 data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">I am a full-stack creative developer based in Barielly, India. I am a Computer Science undergraduate from Chandigarh University and also did some coursework in Designing and Visual Arts.</h3>
                 <h4 data-aos="fade-up" data-aos-delay="450" data-aos-duration="1000"> I enjoy using my skill-set to empower people to accomplish their goals.
-                    My development stack is focused on performance & accessibility with delightful interactions. I create lighting fast WebApps and Websites using <span>MERN</span> Stack with the help of NextJS.</h4>
+                    My development stack is focused on building incredible fast websites and WebApps with delightful interactions.</h4>
             </ContainerA>
 
             <Container3>
@@ -112,25 +111,29 @@ const Homepage = () => {
                         <img src="/images/pose/pose_m14.png" alt="" />
                     </Col>
                     <Col>
-                        <Moreproject />
+                        <Moreproject name="TrackIt" />
                         <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
-                        <Moreproject />
+                        <Moreproject name="Portfolio 2019" />
                         <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
-                        <Moreproject />
+                        <Moreproject name="Bankist" />
                         <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
-                        <Moreproject />
+                        <Moreproject name="doubts.com" />
                         <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
-                        <Moreproject />
+                        <Moreproject name="TrackIt" />
                     </Col>
                 </Row>
             </Container>
 
-            <Container3>
-                <Wrapper>
-                    <h1>Any fool can write code that a computer can understand. <span>Good</span> programmers write code that humans can understand</h1>
-                    <h3>-Martin Fowler</h3>
-                </Wrapper>
-            </Container3>
+            <Main>
+                <Container3>
+                    <h1>Mukul <br />Rajpoot</h1>
+                    <img src="/images/pose/pose_m20.png" alt="" className="first" />
+                    <img src="/images/pose/pose_m19.png" alt="" className="third" />
+                    <img src="/images/pose/tree.png" alt="" className="back1" />
+                    <img src="/images/pose/tree.png" alt="" className="back2" />
+                    <img src="/images/pose/pose_m21.png" alt="" className="second" />
+                </Container3>
+            </Main>
         </Home>
     )
 }
@@ -186,11 +189,17 @@ const Container = styled.div`
         margin-left: 5rem;
     }
 `;
+const Main = styled.div`
+    width: 100%;
+    height: max-content;
+    background-color: rgba(255,0,0,0.1);
+`
+
 const Container2 = styled(Container)`
     max-width: 1580px;
     width: 100%;
     padding: 10rem 2rem;
-    `
+`
 const Row = styled.div`
     width: 100%;
     min-height: 80vh;
@@ -327,13 +336,73 @@ const Design = styled.div`
         }
     }
 `
-
-
 const Container3 = styled(Container)`
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    height: 90vh;
     position: relative;
+    margin: 5rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > h1 {
+        font-size: 15rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        z-index: -3;
+    }
+
+    & > .first {
+        position: absolute;
+        width: 50%;
+        height: auto;
+        left: 10%;
+        z-index: -2;
+
+        @media (max-width: 768px) {
+            width: 80%;
+        }
+    }
+
+    & > .back1 {
+        position: absolute;
+        width: 50%;
+        height: auto;
+        left: 10%;
+        z-index: -4;
+    }
+
+    & > .back2 {
+        position: absolute;
+        width: 30%;
+        height: auto;
+        left: 50%;
+        z-index: -4;
+    }
+
+    & > .second {
+        position: absolute;
+        width: 50%;
+        height: auto;
+        left: 100%;
+        z-index: -2;
+
+        @media (max-width: 768px) {
+            width: 80%;
+        }
+    }
+
+    & > .third {
+        position: absolute;
+        width: 50%;
+        height: auto;
+        left: 50%;
+        z-index: -2;
+
+        @media (max-width: 768px) {
+            width: 80%;
+        }
+    }
 `
 
 
@@ -388,7 +457,7 @@ const LeftHero = styled.div`
     position: relative;
 
     & > h1 {
-        font-size: 4rem;
+        font-size: 5rem;
         background-color: var(--dark);
         color: var(--white);
         font-family: 'Otomanopee One', sans-serif;
@@ -397,8 +466,11 @@ const LeftHero = styled.div`
     }
 
     & > h3 {
-        font-size: 7rem;
-        font-family: 'Otomanopee One', sans-serif;
+        font-size: 6rem;
+        /* -webkit-text-stroke-width: 1px; */
+        /* color: transparent; */
+        /* -webkit-text-stroke-color: #000; */
+        /* font-family: 'Otomanopee One', sans-serif; */
     }
 
     & > img {

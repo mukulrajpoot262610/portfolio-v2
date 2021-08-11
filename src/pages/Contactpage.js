@@ -11,7 +11,7 @@ const Contactpage = () => {
         <Contact>
             <Container>
                 <Design>
-                    <h1 data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1000">Say Hello</h1>
+                    <h1 data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1000">Let's Discuss</h1>
                     <h2 data-aos="fade-right" data-aos-delay="1000" data-aos-duration="1000">&lt;Contact /&gt;</h2>
                 </Design>
                 <img data-aos="zoom-in" data-aos-duration="2000" src="/images/pose/pose_m12.png" alt="" />
