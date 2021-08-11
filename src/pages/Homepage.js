@@ -41,10 +41,11 @@ const Homepage = () => {
         <Home>
             <Container>
                 <LeftHero>
-                    <h3 data-aos="flip-up" data-aos-duration="1000">👋 I'm</h3>
+                    <h3 data-aos="flip-up" data-aos-duration="1000">Hi I'm</h3>
                     <h1 data-aos="flip-up" data-aos-delay="500" data-aos-duration="1000">MUKUL RAJPOOT</h1>
                     <h3 data-aos="flip-up" data-aos-delay="1000" data-aos-duration="1000">Web Developer who speak Code so you don't have to</h3>
                     <Button text="Contact" />
+                    <BG style={{ backgroundColor: '#FEECEA' }}></BG>
                     <img data-aos="zoom-in" data-aos-duration="2000" src="/images/pose/pose_m18.png" alt="" />
                 </LeftHero>
             </Container>
@@ -56,24 +57,24 @@ const Homepage = () => {
                     <Col style={{
                         transform: `translateY(${offesetY * 0.08}px)`,
                     }}>
-                        <Project height="50vh" />
+                        <Project height="50vh" image="/images/1.jpg" position='left' />
                     </Col>
                     <Col style={{
                         transform: `translateY(-${offesetY * 0.05}px)`,
                     }}>
-                        <Project height="60vh" />
+                        <Project height="60vh" image="/images/3.jpg" position='left' />
                     </Col>
                 </Row>
                 <Row>
                     <Col style={{
                         transform: `translateY(${offesetY * 0.08}px)`,
                     }}>
-                        <Project height="60vh" />
+                        <Project height="60vh" image="/images/2.jpg" position='left' />
                     </Col>
                     <Col style={{
                         transform: `translateY(-${offesetY * 0.05}px)`,
                     }}>
-                        <Project height="50vh" />
+                        <Project height="50vh" image="/images/4.jpg" position='left' />
                     </Col>
 
                 </Row>
@@ -98,6 +99,7 @@ const Homepage = () => {
                 <Wrapper>
                     <h1>I’m currently available for freelance projects. <span>Let’s work together</span> to create something worth sharing.
                     </h1>
+                    <BG style={{ backgroundColor: 'rgb(49,196,140, 0.2)', top: '10%', left: '60%' }}></BG>
                     <img src="/images/pose/pose_m13.png" alt="" />
                 </Wrapper>
             </Container3>
@@ -106,6 +108,7 @@ const Homepage = () => {
                 <h1>&lt; More Works /&gt;</h1>
                 <Row>
                     <Col>
+                        <BG style={{ backgroundColor: 'rgb(0,0,0, 0.2)', top: '20%', left: '-15%' }}></BG>
                         <img src="/images/pose/pose_m14.png" alt="" />
                     </Col>
                     <Col>
@@ -204,7 +207,6 @@ const Col = styled.div`
     width: 50%;
     min-height: max-content;
     margin: 2rem;
-    background: #fff;
     display: flex;
     flex-direction: column;
 
@@ -218,6 +220,10 @@ const Col = styled.div`
     & > img {
         width: 100%;
         height: auto;
+
+        @media (max-width: 768px) {
+            width: 50%;
+        }
     }
 
     & > h2 {
@@ -392,7 +398,6 @@ const LeftHero = styled.div`
 
     & > h3 {
         font-size: 7rem;
-        max-width: 80%;
         font-family: 'Otomanopee One', sans-serif;
     }
 
@@ -401,11 +406,25 @@ const LeftHero = styled.div`
         width: 50%;
         height: auto;
         left: 70%;
+        z-index: -2;
+
+        @media (max-width: 768px) {
+            width: 80%;
+        }
     }
 
     & > h6 {
         font-size: 1.5rem;
     }
+`
+
+const BG = styled.div`
+    position: absolute;
+    left: 53%;
+    width: 70rem;
+    height: 70rem;
+    border-radius: 50%;
+    z-index: -5;
 `
 
 export default Homepage

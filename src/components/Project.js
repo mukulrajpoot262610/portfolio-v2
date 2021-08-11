@@ -1,12 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import ImageReveal from './ImageReveal'
 
-const Project = ({ height }) => {
+const Project = ({ height, image, position }) => {
 
     return (
         <>
-            <ImageReveal height={height} text='Projects 2' />
+            <img src={image} alt="" style={{ height: height, objectFit: 'cover', width: '100%', objectPosition: position }} />
             <Wrapper>
                 <Info>
                     <h1>Hello</h1>

@@ -23,6 +23,7 @@ const Aboutpage = () => {
                     <h1 data-aos="fade-left" data-aos-delay={time} data-aos-duration="1000">Mukul Rajpoot</h1>
                     <h2 data-aos="fade-right" data-aos-delay={time} data-aos-duration="1000">&lt;About /&gt;</h2>
                     <img src="/images/pose/pose_m12.png" alt="" />
+                    <BG style={{ backgroundColor: 'rgb(248,224,142, 0.3)', top: '0%', left: '55%' }}></BG>
                 </Design>
                 <h3 data-aos="fade-up" data-aos-delay={2 * time} data-aos-duration="1000">I am a full-stack creative developer based in Barielly, India. I am a Computer Science graduate and did some coursework to the awesome world of designing digital interfaces and products.</h3>
                 <h4 data-aos="fade-up" data-aos-delay={2.5 * time} data-aos-duration="1000"> I enjoy using my skill-set to empower people to accomplish their goals.
@@ -34,6 +35,7 @@ const Aboutpage = () => {
                     <h1 data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">ToolBox</h1>
                     <h2 data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">TECH</h2>
                     <img src="/images/pose/pose_m14.png" alt="" />
+                    <BG style={{ backgroundColor: '#E5F1F8', top: '10%', left: '57%' }}></BG>
                 </Design2>
                 <ToolBox>
                     <Circle data-aos="zoom-in" data-aos-delay="3500" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
@@ -268,6 +270,15 @@ const ToolBox = styled.div`
     @media (max-width: 768px) {
         width: 100%;
     }
+`
+
+const BG = styled.div`
+    position: absolute;
+    left: 53%;
+    width: 50rem;
+    height: 50rem;
+    border-radius: 50%;
+    z-index: -5;
 `
 
 export default Aboutpage

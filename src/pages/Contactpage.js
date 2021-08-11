@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
-import Footer from '../components/Footer'
 
 const Contactpage = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <Contact>
             <Container>
@@ -10,16 +14,28 @@ const Contactpage = () => {
                     <h1 data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1000">Say Hello</h1>
                     <h2 data-aos="fade-right" data-aos-delay="1000" data-aos-duration="1000">&lt;Contact /&gt;</h2>
                 </Design>
-                <h3>Mail</h3>
-                <h3>Github</h3>
-                <h3>LinkedIn</h3>
+                <img data-aos="zoom-in" data-aos-duration="2000" src="/images/pose/pose_m12.png" alt="" />
+                <a href="https://www.linkedin.com/in/mukul-rajpoot-262610/" target="_blan">
+                    LinkedIn
+                </a>
+                <a href="https://github.com/mukulrajpoot262610" target="_blan">
+                    GitHub
+                </a>
+                <a href={"mailto: mukulrajpoot262610@gmail.com"}>
+                    Mail
+                </a>
             </Container>
-            <Footer />
+            <BG data-aos="zoom-out" data-aos-duration="2000" style={{ backgroundColor: 'rgb(248,224,142, 0.3)', top: '10%', left: '52%' }}></BG>
         </Contact>
     )
 }
 
-const Contact = styled.div``
+const Contact = styled.div`
+    width: 100%;
+    min-height: 50vh;
+    overflow: hidden;
+
+`
 
 
 const Design = styled.div`
@@ -70,6 +86,12 @@ const Container = styled.div`
     justify-content: center;
     flex-direction: column;
 
+    & > a {
+        font-size: 4rem;
+        text-decoration: none;
+        color: #191919;
+    }
+
     @media (max-width: 1024px) {
         min-height: 80vh;
     }
@@ -81,6 +103,27 @@ const Container = styled.div`
         font-weight: 400;
         font-size: 3rem;
     }
+
+    & > img {
+        position: absolute;
+        width: 50%;
+        height: auto;
+        left: 70%;
+        z-index: -2;
+
+        @media (max-width: 768px) {
+            width: 80%;
+        }
+    }
 `;
+
+const BG = styled.div`
+    position: absolute;
+    left: 53%;
+    width: 70rem;
+    height: 70rem;
+    border-radius: 50%;
+    z-index: -5;
+`
 
 export default Contactpage

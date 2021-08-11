@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Footer from '../components/Footer'
 
 const Workpage = () => {
     return (
@@ -12,7 +11,6 @@ const Workpage = () => {
                 </Design>
                 <h3 data-aos="fade-up" data-aos-delay="2000" data-aos-duration="1000">A collection of more designs and front-end coding. These are a mix of freelance, contest, practice and side projects.</h3>
             </Container>
-            <Footer />
         </Work>
     )
 }

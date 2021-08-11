@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
 
     useEffect(() => {
+        window.scrollTo(0, 0)
         Aos.init({ duration: 2000 })
     }, [])
 
@@ -15,7 +16,7 @@ const Footer = () => {
             <LeftFoot>
                 <h6 data-aos="flip-up" data-aos-delay="100" data-aos-duration="1000">Ready to go? <br />Let's chat!</h6>
                 <Circle data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
-                    <Link to="/about">
+                    <Link to="/contact">
                         <h2 >Let's Discuss</h2>
                     </Link>
                 </Circle>
@@ -56,7 +57,7 @@ const Circle = styled.div`
 `
 
 const Foot = styled.footer`
-    height: 60vh;
+    height: max-content;
     padding: 5rem;
     background-color: #191919;
     width: 100%;
