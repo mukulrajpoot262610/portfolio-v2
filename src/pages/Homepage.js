@@ -56,24 +56,36 @@ const Homepage = () => {
                     <Col style={{
                         transform: `translateY(${offesetY * 0.08}px)`,
                     }}>
-                        <Project height="50vh" image="/images/1.jpg" position='left' name='Netflix Clone' />
+                        <Project height="50vh" image="/images/1.jpg" position='left' name='Netflix Clone' type="WebApp" />
                     </Col>
                     <Col style={{
                         transform: `translateY(-${offesetY * 0.05}px)`,
                     }}>
-                        <Project height="60vh" image="/images/3.jpg" position='left' name='Dev.to Clone' />
+                        <Project height="60vh" image="/images/3.jpg" position='left' name='Dev.to Clone' type="WebApp" />
                     </Col>
                 </Row>
                 <Row>
                     <Col style={{
                         transform: `translateY(${offesetY * 0.08}px)`,
                     }}>
-                        <Project height="60vh" image="/images/2.jpg" position='left' name='Netflix Clone' />
+                        <Project height="60vh" image="/images/8.jpg" position='left' name='Portfolio 2019' type="Website" />
                     </Col>
                     <Col style={{
                         transform: `translateY(-${offesetY * 0.05}px)`,
                     }}>
-                        <Project height="50vh" image="/images/4.jpg" position='left' name='Netflix Clone' />
+                        <Project height="50vh" image="/images/5.jpg" position='left' name='TrakerX' type="WebApp" />
+                    </Col>
+
+                </Row>
+                <Row>
+                    <Col style={{
+                        transform: `translateY(${offesetY * 0.08}px)`,
+                    }}>
+                    </Col>
+                    <Col style={{
+                        transform: `translateY(-${offesetY * 0.05}px)`,
+                    }}>
+                        <Project height="50vh" image="/images/6.jpg" position='left' name='TrackIt' type="WebApp" />
                     </Col>
 
                 </Row>
@@ -124,16 +136,13 @@ const Homepage = () => {
                 </Row>
             </Container>
 
-            <Main>
+            {/* <Main>
                 <Container3>
-                    <h1>Mukul <br />Rajpoot</h1>
-                    <img src="/images/pose/pose_m20.png" alt="" className="first" />
+                    <h1>Do What you <span>Love ❤</span></h1>
                     <img src="/images/pose/pose_m19.png" alt="" className="third" />
-                    <img src="/images/pose/tree.png" alt="" className="back1" />
-                    <img src="/images/pose/tree.png" alt="" className="back2" />
                     <img src="/images/pose/pose_m21.png" alt="" className="second" />
                 </Container3>
-            </Main>
+            </Main> */}
         </Home>
     )
 }
@@ -340,13 +349,14 @@ const Container3 = styled(Container)`
     width: 100%;
     height: 90vh;
     position: relative;
-    margin: 5rem auto;
+    margin: 0 auto;
+    padding: 5rem;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
     & > h1 {
-        font-size: 15rem;
+        font-size: 10rem;
         font-weight: 900;
         text-transform: uppercase;
         z-index: -3;
@@ -396,7 +406,7 @@ const Container3 = styled(Container)`
         position: absolute;
         width: 50%;
         height: auto;
-        left: 50%;
+        left: -20%;
         z-index: -2;
 
         @media (max-width: 768px) {
@@ -411,9 +421,8 @@ const Wrapper = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
 
     & > h3 {
         margin-left: auto;

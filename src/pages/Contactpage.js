@@ -25,7 +25,6 @@ const Contactpage = () => {
                     Mail
                 </a>
             </Container>
-            <BG data-aos="zoom-out" data-aos-duration="2000" style={{ backgroundColor: 'rgb(248,224,142, 0.3)', top: '10%', left: '52%' }}></BG>
         </Contact>
     )
 }
@@ -34,13 +33,11 @@ const Contact = styled.div`
     width: 100%;
     min-height: 50vh;
     overflow: hidden;
-
 `
 
 
 const Design = styled.div`
     position: relative;
-    overflow: hidden;
     height: 35vh;
 
     & > h2 {
@@ -74,7 +71,6 @@ const Design = styled.div`
 `
 
 const Container = styled.div`
-    overflow: hidden;
     width: 100%;
     max-width: 1280px;
     min-height: 100vh;
@@ -85,15 +81,12 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
+    overflow: hidden;
 
     & > a {
         font-size: 4rem;
         text-decoration: none;
         color: #191919;
-    }
-
-    @media (max-width: 1024px) {
-        min-height: 80vh;
     }
 
     & > h3 {
@@ -118,6 +111,7 @@ const Container = styled.div`
 `;
 
 const BG = styled.div`
+
     position: absolute;
     left: 53%;
     width: 70rem;

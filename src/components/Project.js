@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Project = ({ height, image, position, name }) => {
+const Project = ({ height, image, position, name, type }) => {
 
     return (
         <>
@@ -9,7 +9,7 @@ const Project = ({ height, image, position, name }) => {
             <Wrapper>
                 <Info>
                     <h1>{name}</h1>
-                    <h2>Website</h2>
+                    <h2>{type}</h2>
                 </Info>
                 <Circle>
                     <h2>Let's Visit</h2>
