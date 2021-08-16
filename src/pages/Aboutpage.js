@@ -25,7 +25,7 @@ const Aboutpage = () => {
                     <img src="/images/pose/pose_m12.png" alt="" />
                     <BG style={{ backgroundColor: 'rgb(248,224,142, 0.3)', top: '0%', left: '55%' }}></BG>
                 </Design>
-                <h3 data-aos="fade-up" data-aos-delay={2 * time} data-aos-duration="1000">I am a full-stack creative developer based in Barielly, India. I am a Computer Science graduate and did some coursework to the awesome world of designing digital interfaces and products.</h3>
+                <h3 data-aos="fade-up" data-aos-delay={2 * time} data-aos-duration="1000">I am a full-stack creative developer based in Barielly, <span>India</span>. I am a Computer Science graduate and did some coursework to the awesome world of designing digital interfaces and products.</h3>
                 <h4 data-aos="fade-up" data-aos-delay={2.5 * time} data-aos-duration="1000"> I enjoy using my skill-set to empower people to accomplish their goals.
                     My development stack is focused on performance & accessibility with delightful interactions. I create lighting fast WebApps and Websites using <span>MERN</span> Stack with the help of NextJS.</h4>
             </Container>
@@ -211,6 +211,11 @@ const Container = styled.div`
         text-align: left;
         font-weight: 400;
         font-size: 3rem;
+
+        & > span {
+            font-weight: 700;
+            color: var(--green);
+        }
 
         @media (max-width: 768px) {
             margin: 2rem 0;

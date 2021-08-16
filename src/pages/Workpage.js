@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import Moreproject from '../components/Moreproject'
+import { Link } from 'react-router-dom'
 
 const Workpage = () => {
 
@@ -22,24 +23,35 @@ const Workpage = () => {
             <Container>
                 <Row>
                     <Col>
-                        <Moreproject name="TrackIt" />
+                        <Link to="/project/7">
+                            <Moreproject name="TrackIt" />
+                        </Link>
                         <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
-                        <Moreproject name="Portfolio 2019" />
+                        <Link to="/project/6">
+                            <Moreproject name="Portfolio 2019" />
+                        </Link>
                         <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
-                        <Moreproject name="Bankist" />
+                        <Link to="/project/8">
+                            <Moreproject name="Bankist" />
+                        </Link>
                         <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
-                        <Moreproject name="doubts.com" />
-                        <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
-                        <Moreproject name="TrackIt" />
+                        <Link to="/project/2">
+                            <Moreproject name="TrackerX" />
+                        </Link>
                     </Col>
                     <Col>
-                        <Moreproject name="TrackIt" />
+                        <Link to="/project/1">
+                            <Moreproject name="Dev.to Clone" />
+                        </Link>
                         <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
-                        <Moreproject name="Portfolio 2019" />
+                        <Link to="/project/5">
+                            <Moreproject name="NetFlix Clone" />
+                        </Link>
                         <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
-                        <Moreproject name="Bankist" />
+                        <Link to="/project/4">
+                            <Moreproject name="Portflio 2021" />
+                        </Link>
                         <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
-                        <Moreproject name="TrackIt" />
                     </Col>
                 </Row>
             </Container>

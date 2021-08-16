@@ -5,7 +5,6 @@ import 'aos/dist/aos.css'
 import { isMobile } from 'react-device-detect';
 import Project from '../components/Project'
 import { Link } from 'react-router-dom'
-import Moreproject from '../components/Moreproject'
 
 
 const Homepage = () => {
@@ -56,16 +55,16 @@ const Homepage = () => {
                     <Col style={{
                         transform: `translateY(${offesetY * 0.08}px)`,
                     }}>
-                        <Link to='/project/5'>
-                            <Project height="50vh" image="/images/1.jpg" position='left' name='Netflix Clone' type="WebApp" />
+                        <Link to='/project/1'>
+                            <Project height="60vh" image="/images/1.jpg" position='left' name='Dev.to Clone' type="WebApp" />
                         </Link>
                     </Col>
 
                     <Col style={{
                         transform: `translateY(-${offesetY * 0.05}px)`,
                     }}>
-                        <Link to="/project/1">
-                            <Project height="60vh" image="/images/3.jpg" position='left' name='Dev.to Clone' type="WebApp" />
+                        <Link to="/project/5">
+                            <Project height="50vh" image="/images/5.jpg" position='left' name='Netflix Clone' type="WebApp" />
                         </Link>
                     </Col>
                 </Row>
@@ -74,14 +73,14 @@ const Homepage = () => {
                         transform: `translateY(${offesetY * 0.08}px)`,
                     }}>
                         <Link to="/project/6">
-                            <Project height="60vh" image="/images/8.jpg" position='left' name='Portfolio 2019' type="Website" />
+                            <Project height="60vh" image="/images/6.jpg" position='left' name='Portfolio 2019' type="Website" />
                         </Link>
                     </Col>
                     <Col style={{
                         transform: `translateY(-${offesetY * 0.05}px)`,
                     }}>
                         <Link to="/project/2">
-                            <Project height="50vh" image="/images/5.jpg" position='left' name='TrakerX' type="WebApp" />
+                            <Project height="50vh" image="/images/2.jpg" position='left' name='TrackerX' type="WebApp" />
                         </Link>
                     </Col>
 
@@ -91,14 +90,14 @@ const Homepage = () => {
                         transform: `translateY(${offesetY * 0.08}px)`,
                     }}>
                         <Link to="/project/7">
-                            <Project height="50vh" image="/images/6.jpg" position='left' name='TrackIt' type="WebApp" />
+                            <Project height="50vh" image="/images/7.jpg" position='left' name='TrackIt' type="WebApp" />
                         </Link>
                     </Col>
                     <Col style={{
                         transform: `translateY(-${offesetY * 0.05}px)`,
                     }}>
-                        <Link to="/project/7">
-                            <Project height="50vh" image="/images/6.jpg" position='left' name='TrackIt' type="WebApp" />
+                        <Link to="/project/4">
+                            <Project height="50vh" image="/images/4.jpg" position='left' name='Portfolio 2021' type="WebSite" />
                         </Link>
                     </Col>
 
@@ -129,7 +128,7 @@ const Homepage = () => {
                 </Wrapper>
             </Container3>
 
-            <Container>
+            {/* <Container>
                 <h1>&lt; More Works /&gt;</h1>
                 <Row>
                     <Col>
@@ -145,20 +144,20 @@ const Homepage = () => {
                             <Moreproject name="Portfolio 2019" />
                         </Link>
                         <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
-                        <Link to="/project/2">
+                        <Link to="/project/8">
                             <Moreproject name="Bankist" />
                         </Link>
-                        {/* <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
+                        <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
                         <Link to="/project/2">
                             <Moreproject name="doubts.com" />
-                        </Link> */}
+                        </Link>
                         <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
                         <Link to="/project/2">
                             <Moreproject name="TrackIt" />
                         </Link>
                     </Col>
                 </Row>
-            </Container>
+            </Container> */}
 
             {/* <Main>
                 <Container3>
@@ -222,11 +221,6 @@ const Container = styled.div`
         margin-left: 5rem;
     }
 `;
-const Main = styled.div`
-    width: 100%;
-    height: max-content;
-    background-color: rgba(255,0,0,0.1);
-`
 const ContainerLarge = styled(Container)`
     max-width: 1580px;
     width: 100%;
