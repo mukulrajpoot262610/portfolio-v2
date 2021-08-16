@@ -59,6 +59,7 @@ const Circle = styled.div`
 const Foot = styled.footer`
     height: max-content;
     padding: 5rem;
+    margin-top: 5rem;
     background-color: #191919;
     width: 100%;
     display: flex;

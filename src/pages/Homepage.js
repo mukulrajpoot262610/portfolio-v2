@@ -31,7 +31,7 @@ const Homepage = () => {
     }, []);
 
     useEffect(() => {
-        // window.scrollTo(0, 0)
+        window.scrollTo(0, 0)
         Aos.init({ duration: 2000 })
         document.title = 'Mukul Rajpoot Portfolio'
     }, [])
@@ -42,38 +42,47 @@ const Homepage = () => {
                 <LeftHero>
                     <h3 data-aos="flip-up" data-aos-duration="1000">Hey, I'm</h3>
                     <h1 data-aos="flip-up" data-aos-delay="500" data-aos-duration="1000">MUKUL RAJPOOT</h1>
-                    <h3 data-aos="flip-up" data-aos-delay="1000" data-aos-duration="1000">A web designer + developer <br /> from India.</h3>
+                    <h3 data-aos="flip-up" data-aos-delay="1000" data-aos-duration="1000">A web developer <br /> from India.</h3>
                     {/* <Button text="Contact" /> */}
-                    <BG style={{ backgroundColor: '#FEECEA' }}></BG>
+                    <BG style={{ backgroundColor: '#FEECEA' }} data-aos="zoom-in" data-aos-duration="2000"></BG>
                     <img data-aos="zoom-in" data-aos-duration="2000" src="/images/pose/pose_m18.png" alt="" />
                 </LeftHero>
             </Container>
 
-            <Container2>
+            <ContainerLarge>
                 <h1>&lt; Selected</h1>
                 <h1>Projects  /&gt;</h1>
                 <Row>
                     <Col style={{
                         transform: `translateY(${offesetY * 0.08}px)`,
                     }}>
-                        <Project height="50vh" image="/images/1.jpg" position='left' name='Netflix Clone' type="WebApp" />
+                        <Link to='/project/5'>
+                            <Project height="50vh" image="/images/1.jpg" position='left' name='Netflix Clone' type="WebApp" />
+                        </Link>
                     </Col>
+
                     <Col style={{
                         transform: `translateY(-${offesetY * 0.05}px)`,
                     }}>
-                        <Project height="60vh" image="/images/3.jpg" position='left' name='Dev.to Clone' type="WebApp" />
+                        <Link to="/project/1">
+                            <Project height="60vh" image="/images/3.jpg" position='left' name='Dev.to Clone' type="WebApp" />
+                        </Link>
                     </Col>
                 </Row>
                 <Row>
                     <Col style={{
                         transform: `translateY(${offesetY * 0.08}px)`,
                     }}>
-                        <Project height="60vh" image="/images/8.jpg" position='left' name='Portfolio 2019' type="Website" />
+                        <Link to="/project/6">
+                            <Project height="60vh" image="/images/8.jpg" position='left' name='Portfolio 2019' type="Website" />
+                        </Link>
                     </Col>
                     <Col style={{
                         transform: `translateY(-${offesetY * 0.05}px)`,
                     }}>
-                        <Project height="50vh" image="/images/5.jpg" position='left' name='TrakerX' type="WebApp" />
+                        <Link to="/project/2">
+                            <Project height="50vh" image="/images/5.jpg" position='left' name='TrakerX' type="WebApp" />
+                        </Link>
                     </Col>
 
                 </Row>
@@ -81,15 +90,20 @@ const Homepage = () => {
                     <Col style={{
                         transform: `translateY(${offesetY * 0.08}px)`,
                     }}>
+                        <Link to="/project/7">
+                            <Project height="50vh" image="/images/6.jpg" position='left' name='TrackIt' type="WebApp" />
+                        </Link>
                     </Col>
                     <Col style={{
                         transform: `translateY(-${offesetY * 0.05}px)`,
                     }}>
-                        <Project height="50vh" image="/images/6.jpg" position='left' name='TrackIt' type="WebApp" />
+                        <Link to="/project/7">
+                            <Project height="50vh" image="/images/6.jpg" position='left' name='TrackIt' type="WebApp" />
+                        </Link>
                     </Col>
 
                 </Row>
-            </Container2>
+            </ContainerLarge>
 
             <ContainerA>
                 <Design>
@@ -108,10 +122,10 @@ const Homepage = () => {
 
             <Container3>
                 <Wrapper>
-                    <h1>I’m currently available for freelance projects. <span>Let’s work together</span> to create something worth sharing.
+                    <h1 data-aos="fade-in" data-aos-duration="2000">I’m currently available for freelance projects. <span>Let’s work together</span> to create something worth sharing.
                     </h1>
-                    <BG style={{ backgroundColor: 'rgb(49,196,140, 0.2)', top: '10%', left: '60%' }}></BG>
-                    <img src="/images/pose/pose_m13.png" alt="" />
+                    <BG data-aos="zoom-in" data-aos-duration="2000" style={{ backgroundColor: 'rgb(49,196,140, 0.2)', top: '10%', left: '60%' }}></BG>
+                    <img data-aos="zoom-in" data-aos-duration="2000" src="/images/pose/pose_m13.png" alt="" />
                 </Wrapper>
             </Container3>
 
@@ -123,15 +137,25 @@ const Homepage = () => {
                         <img src="/images/pose/pose_m14.png" alt="" />
                     </Col>
                     <Col>
-                        <Moreproject name="TrackIt" />
+                        <Link to="/project/2">
+                            <Moreproject name="TrackIt" />
+                        </Link>
                         <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
-                        <Moreproject name="Portfolio 2019" />
+                        <Link to="/project/2">
+                            <Moreproject name="Portfolio 2019" />
+                        </Link>
                         <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
-                        <Moreproject name="Bankist" />
+                        <Link to="/project/2">
+                            <Moreproject name="Bankist" />
+                        </Link>
+                        {/* <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
+                        <Link to="/project/2">
+                            <Moreproject name="doubts.com" />
+                        </Link> */}
                         <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
-                        <Moreproject name="doubts.com" />
-                        <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
-                        <Moreproject name="TrackIt" />
+                        <Link to="/project/2">
+                            <Moreproject name="TrackIt" />
+                        </Link>
                     </Col>
                 </Row>
             </Container>
@@ -203,8 +227,7 @@ const Main = styled.div`
     height: max-content;
     background-color: rgba(255,0,0,0.1);
 `
-
-const Container2 = styled(Container)`
+const ContainerLarge = styled(Container)`
     max-width: 1580px;
     width: 100%;
     padding: 10rem 2rem;
@@ -472,9 +495,12 @@ const LeftHero = styled.div`
         font-family: 'Otomanopee One', sans-serif;
         padding: .1rem 1rem;
         margin: 2rem 0;
+        font-family: 'Dela Gothic One', cursive;
     }
 
     & > h3 {
+        font-family: 'Dela Gothic One', cursive;
+        text-transform: uppercase;
         font-size: 6rem;
         /* -webkit-text-stroke-width: 1px; */
         /* color: transparent; */

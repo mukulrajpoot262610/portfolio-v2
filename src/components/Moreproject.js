@@ -35,14 +35,14 @@ const Wrapper = styled.div`
 `
 const Info = styled.div`
     & > h1 {
-        font-size: 5rem;
+        font-size: 3rem;
         font-weight: 400;
         line-height: 5rem;
     }
 
     & > h2 {
         color: gray;
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 400;
     }
 `
@@ -53,14 +53,14 @@ const Circle = styled.div`
     align-items: center;
     justify-content: center;
     margin-left: auto;
-    height: 10rem;
-    width: 10rem;
+    height: 9rem;
+    width: 9rem;
     border-radius: 50%;
     background-color: #191919;
 
     & > h2 {
         color: #fff;
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: 600;
         cursor: pointer;
         transition: all .2s ease-in-out;

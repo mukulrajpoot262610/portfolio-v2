@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+::selection {
+  color: #31c48c;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 html {

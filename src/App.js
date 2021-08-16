@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Homepage from './pages/Homepage';
 import Workpage from './pages/Workpage';
@@ -8,7 +7,6 @@ import Contactpage from './pages/Contactpage';
 import Projectpage from './pages/Projectpage'
 import Contactbar from './components/Contactbar';
 import ImageReveal from './components/ImageReveal';
-import Test from './pages/Test';
 import Footer from './components/Footer';
 import AnimatedCursor from "react-animated-cursor"
 
@@ -29,9 +27,8 @@ function App() {
         <Route exact path="/work" component={Workpage} />
         <Route exact path="/about" component={Aboutpage} />
         <Route exact path="/contact" component={Contactpage} />
-        <Route exact path="/work/:id" component={Projectpage} />
+        <Route exact path="/project/:id" component={Projectpage} />
         <Route exact path="/image" component={ImageReveal} />
-        <Route exact path="/test" component={Test} />
       </Switch>
       <Footer />
     </Router>

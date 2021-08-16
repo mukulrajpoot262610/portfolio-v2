@@ -91,8 +91,8 @@ const Aboutpage = () => {
                         <span>FIGMA</span>
                     </Circle>
                     <Circle data-aos="zoom-in" data-aos-delay="5500" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
-                        <i class="fab fa-aws"></i>
-                        <span>AWS</span>
+                        <img src="/images/firebase.svg" style={{ width: '30%' }} alt="" />
+                        <span>Firebase</span>
                     </Circle>
                 </ToolBox>
             </Container>
@@ -104,9 +104,9 @@ const Aboutpage = () => {
                     <img src="/images/pose/pose_m22.png" alt="" />
                     <BG style={{ backgroundColor: '#E5F1F8', top: '10%', left: '57%' }}></BG>
                 </Design2>
-                <h4>There’s nothing I enjoy more than developing good websites and webApps for Cool people. I believe that people should do things they are good at or in which their <span style={{ color: 'crimson' }}>Hearts</span> lie. That's why I choose freelance web development as my career.</h4>
-                <h4>I’ve spent many years trying to perfect what I do and while I’ll never be perfect, I do my best to come close.</h4>
-                <h3>If you’ve got a project you’d like to work on with me just get in touch and we can get to work!</h3>
+                <h4 data-aos="fade-left" data-aos-duration="1000">There’s nothing I enjoy more than developing good websites and webApps for Cool people. I believe that people should do things they are good at or in which their <span style={{ color: 'crimson' }}>Hearts</span> lie. That's why I choose freelance web development as my career.</h4>
+                <h4 data-aos="fade-right" data-aos-duration="1000" style={{ marginBottom: '2rem' }}>I’ve spent many years trying to perfect what I do and while I’ll never be perfect, I do my best to come close.</h4>
+                <h3 data-aos="fade-left" data-aos-duration="1000">If you’ve got a project you’d like to work on with me just get in touch and we can get to work!</h3>
             </Container>
         </About>
     )
@@ -191,7 +191,7 @@ const Container = styled.div`
     width: 100%;
     max-width: 1280px;
     min-height: 100vh;
-    margin: 0 auto;
+    margin: 10rem auto;
     position: relative;
     /* padding: 5rem; */
     z-index: 0;
@@ -225,7 +225,7 @@ const Container = styled.div`
         width: 60%;
         text-align: left;
         font-weight: 400;
-        font-size: 2rem;
+        font-size: 2.5rem;
 
         & > span {
             font-weight: 700;

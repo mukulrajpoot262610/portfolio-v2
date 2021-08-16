@@ -15,15 +15,21 @@ const Contactpage = () => {
                     <h2 data-aos="fade-right" data-aos-delay="1000" data-aos-duration="1000">&lt;Contact /&gt;</h2>
                 </Design>
                 <img data-aos="zoom-in" data-aos-duration="2000" src="/images/pose/pose_m12.png" alt="" />
-                <a href="https://www.linkedin.com/in/mukul-rajpoot-262610/" target="_blan">
-                    LinkedIn
-                </a>
-                <a href="https://github.com/mukulrajpoot262610" target="_blan">
-                    GitHub
-                </a>
-                <a href={"mailto: mukulrajpoot262610@gmail.com"}>
-                    Mail
-                </a>
+                <span>
+                    <a href="https://www.linkedin.com/in/mukul-rajpoot-262610/" target="_blan">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </span>
+                <span>
+                    <a href="https://github.com/mukulrajpoot262610" target="_blan">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </span>
+                <span>
+                    <a href={"mailto: mukulrajpoot262610@gmail.com"}>
+                        <i class="fas fa-envelope"></i> Mail
+                    </a>
+                </span>
             </Container>
         </Contact>
     )
@@ -83,10 +89,14 @@ const Container = styled.div`
     flex-direction: column;
     overflow: hidden;
 
-    & > a {
+    & > span > a {
         font-size: 4rem;
         text-decoration: none;
         color: #191919;
+
+        &:hover {
+            color: var(--yellow);
+        }
     }
 
     & > h3 {
@@ -109,15 +119,5 @@ const Container = styled.div`
         }
     }
 `;
-
-const BG = styled.div`
-
-    position: absolute;
-    left: 53%;
-    width: 70rem;
-    height: 70rem;
-    border-radius: 50%;
-    z-index: -5;
-`
 
 export default Contactpage
