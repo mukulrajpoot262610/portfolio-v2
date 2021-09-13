@@ -21,12 +21,12 @@ const Aboutpage = () => {
                 <Design>
                     <h1 data-aos="fade-left" data-aos-delay={time} data-aos-duration="1000">Mukul Rajpoot</h1>
                     <h2 data-aos="fade-right" data-aos-delay={time} data-aos-duration="1000">&lt;About /&gt;</h2>
-                    <img src="/images/pose/pose_m12.png" alt="" />
                 </Design>
-                <BG style={{ backgroundColor: 'rgb(248,224,142, 0.3)', top: '0%', left: '60%' }}></BG>
-                <h3 data-aos="fade-up" data-aos-delay={2 * time} data-aos-duration="1000">I am a full-stack creative developer based in Barielly, <span>India</span>. I am a Computer Science graduate and did some coursework to the awesome world of designing digital interfaces and products.</h3>
-                <h4 data-aos="fade-up" data-aos-duration="1000"> I enjoy using my skill-set to empower people to accomplish their goals.
+                <img data-aos="zoom-in" data-aos-duration="2000" src="/images/pose/pose_m12.png" alt="" />
+                <h3 data-aos="fade-up" data-aos-delay={time} data-aos-duration="1000">I am a full-stack creative developer based in Barielly, <span>India</span>. I am a Computer Science graduate and did some coursework to the awesome world of designing digital interfaces and products.</h3>
+                <h4 data-aos="fade-up" data-aos-delay={time} data-aos-duration="1000"> I enjoy using my   skill-set to empower people to accomplish their goals.
                     My development stack is focused on performance & accessibility with delightful interactions. I create lighting fast WebApps and Websites using <span>MERN</span> Stack with the help of NextJS.</h4>
+                <BG style={{ backgroundColor: 'rgb(248,224,142, 0.3)', top: '10%', left: '55%' }}></BG>
             </Container>
 
             <Container>
@@ -103,7 +103,7 @@ const Aboutpage = () => {
                 <h4 data-aos="fade-right" data-aos-duration="1000" style={{ marginBottom: '2rem' }}>I’ve spent many years trying to perfect what I do and while I’ll never be perfect, I do my best to come close.</h4>
                 <h3 data-aos="fade-left" data-aos-duration="1000">If you’ve got a project you’d like to work on with me just get in touch and we can get to work!</h3>
             </Container>
-        </About >
+        </About>
     )
 }
 
@@ -157,7 +157,7 @@ const Design = styled.div`
         left: 0%;
 
         @media (max-width: 768px) {
-            font-size: 13rem;
+            font-size: 10rem;
         }
     }
 
@@ -185,62 +185,59 @@ const Design = styled.div`
 const Container = styled.div`
     overflow: hidden;
     width: 100%;
-    max-width: 1280px;
+    max-width: 1580px;
     min-height: 100vh;
-    margin: 10rem auto;
+    margin: 0 auto;
     position: relative;
-    /* padding: 5rem; */
+    padding: 5rem;
     z-index: 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
 
-    @media (max-width: 1024px) {
-        min-height: 90vh;
+
+    & > img {
+        position: absolute;
+        width: 40%;
+        height: auto;
+        left: 70%;
+        z-index: -2;
+
+        @media (max-width: 768px) {
+            width: 80%;
+        }
+    }
+
+     @media (max-width: 1024px) {
+        min-height: 80vh;
     }
 
     & > h3 {
-        padding: 0 5rem;
-        margin-left: auto;
-        margin-top: 5rem;
-        width: 60%;
+        margin: 2rem 0;
+        /* margin-left: auto; */
+        width: 50%;
         text-align: left;
         font-weight: 400;
         font-size: 3rem;
 
-        & > span {
-            font-weight: 700;
-            color: var(--green);
-        }
-
-        @media (max-width: 768px) {
+         @media (max-width: 768px) {
             margin: 2rem 0;
-            width: 90%;
+            width: 70%;
         }
     }
 
     & > h4 {
-        padding: 0 5rem;
-        margin: 4rem 0;
-        margin-left: auto;
-        width: 60%;
+        /* margin-left: auto; */
+        width: 50%;
         text-align: left;
         font-weight: 400;
-        font-size: 2.5rem;
+        font-size: 2rem;
+        margin: 2rem 0;
 
-        & > span {
-            font-weight: 700;
-            color: var(--green);
-        }
-
-        @media (max-width: 768px) {
+         @media (max-width: 768px) {
             margin: 2rem 0;
-            width: 90%;
+            width: 70%;
         }
-    }
-
-    & > i {
-        font-size: 3rem;
     }
 `;
 
@@ -298,8 +295,8 @@ const ToolBox = styled.div`
 const BG = styled.div`
     position: absolute;
     left: 53%;
-    width: 50rem;
-    height: 50rem;
+    width: 70rem;
+    height: 70rem;
     border-radius: 50%;
     z-index: -5;
 `

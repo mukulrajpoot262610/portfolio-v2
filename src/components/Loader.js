@@ -12,8 +12,10 @@ const Loader = () => {
 
     return (
         <Load>
+            <BG style={{ backgroundColor: '#FEECEA', top: '50%', left: '70%' }}></BG>
             <h1 data-aos="fade-up">namaste</h1>
-            <h2 data-aos="fade-up">🙏</h2>
+            <BG style={{ backgroundColor: 'rgb(248,224,142, 0.3)', top: '15%', left: '-15%' }}></BG>
+            <BG style={{ backgroundColor: 'rgb(49,196,140, 0.2)', top: '-40%', left: '35%' }}></BG>
         </Load>
     )
 }
@@ -24,8 +26,8 @@ const Load = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    padding: 5rem;
+    position: relative;
+    overflow: hidden;
 
     & > h1 {
         font-size: 10vw;
@@ -34,5 +36,15 @@ const Load = styled.div`
         font-size: 2rem;
     }
 `
+
+const BG = styled.div`
+    position: absolute;
+    left: 53%;
+    width: 70rem;
+    height: 70rem;
+    border-radius: 50%;
+    z-index: -5;
+`
+
 
 export default Loader

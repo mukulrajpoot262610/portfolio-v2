@@ -7,7 +7,6 @@ import PROJECTS_DATA from '../projects.data'
 const Moreproject = ({ name, id }) => {
 
     const data = PROJECTS_DATA.find((e) => e.id == id)
-    console.log(data)
 
     useEffect(() => {
         Aos.init({ duration: 2000 })

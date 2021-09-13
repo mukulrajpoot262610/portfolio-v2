@@ -12,15 +12,15 @@ const Projectpage = () => {
     const [offesetY, setOffsetY] = useState(0);
 
     const handleScroll = () => {
-        // if (isMobile) {
-        //     setOffsetY(0);
-        // } else {
-        // }
+        if (isMobile) {
+            setOffsetY(0);
+        } else {
+        }
         setOffsetY(window.pageYOffset);
     };
 
     useEffect(() => {
-        // window.scrollTo(0, 0)
+        window.scrollTo(0, 0)
         setProject(PROJECTS_DATA.find((e) => e.id === Number(id)))
         window.addEventListener("scroll", handleScroll);
 

@@ -39,9 +39,9 @@ const Homepage = () => {
         <Home>
             <Container>
                 <LeftHero>
-                    <h2 data-aos="flip-up" data-aos-duration="1000">Hey, I'm</h2>
+                    <h2 data-aos="flip-up" data-aos-duration="1000">HEY, I'M</h2>
                     <h1 data-aos="flip-up" data-aos-delay="500" data-aos-duration="1000">MUKUL RAJPOOT</h1>
-                    <h3 data-aos="flip-up" data-aos-delay="1000" data-aos-duration="1000">A <span>Full-Stack developer</span> from India.</h3>
+                    <h3 data-aos="flip-up" data-aos-delay="1000" data-aos-duration="1000">A Full-Stack developer from India.</h3>
                     {/* <Button text="Contact" /> */}
                     <BG style={{ backgroundColor: '#FEECEA' }} data-aos="zoom-in" data-aos-duration="2000"></BG>
                     <img data-aos="zoom-in" data-aos-duration="2000" src="/images/pose/pose_m18.png" alt="" />
@@ -118,7 +118,7 @@ const Homepage = () => {
                     </Col>
                 </Row>
                 <Circle data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
-                    <Link to="/about">
+                    <Link to="/work">
                         <h2>View All</h2>
                     </Link>
                 </Circle>
