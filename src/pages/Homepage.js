@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Aos from 'aos'
-import 'aos/dist/aos.css'
 import { isMobile } from 'react-device-detect';
 import Project from '../components/Project'
 import { Link } from 'react-router-dom'
+import Button from '../components/Button'
 
 
 const Homepage = () => {
@@ -30,7 +30,7 @@ const Homepage = () => {
     }, []);
 
     useEffect(() => {
-        window.scrollTo(0, 0)
+        // window.scrollTo(0, 0)
         Aos.init({ duration: 2000 })
         document.title = 'Mukul Rajpoot Portfolio'
     }, [])
@@ -39,14 +39,30 @@ const Homepage = () => {
         <Home>
             <Container>
                 <LeftHero>
-                    <h3 data-aos="flip-up" data-aos-duration="1000">Hey, I'm</h3>
+                    <h2 data-aos="flip-up" data-aos-duration="1000">Hey, I'm</h2>
                     <h1 data-aos="flip-up" data-aos-delay="500" data-aos-duration="1000">MUKUL RAJPOOT</h1>
-                    <h3 data-aos="flip-up" data-aos-delay="1000" data-aos-duration="1000">A web developer <br /> from India.</h3>
+                    <h3 data-aos="flip-up" data-aos-delay="1000" data-aos-duration="1000">A <span>Full-Stack developer</span> from India.</h3>
                     {/* <Button text="Contact" /> */}
                     <BG style={{ backgroundColor: '#FEECEA' }} data-aos="zoom-in" data-aos-duration="2000"></BG>
                     <img data-aos="zoom-in" data-aos-duration="2000" src="/images/pose/pose_m18.png" alt="" />
                 </LeftHero>
             </Container>
+
+            <ContainerA>
+                <Design>
+                    <h1 data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">Mukul Rajpoot</h1>
+                    <h2 data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">&lt;About /&gt;</h2>
+                </Design>
+                <h3 data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">I am a full-stack creative developer based in Barielly, India. I am a <span>Computer Science</span> undergraduate from Chandigarh University and also did some coursework in Designing and Visual Arts.</h3>
+                <h4 data-aos="fade-up" data-aos-delay="450" data-aos-duration="1000"> I enjoy using my skill-set to empower people to accomplish their goals.
+                    My development stack is focused on building incredible fast websites and WebApps with delightful interactions.
+                </h4>
+                <Circle data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
+                    <Link to="/about">
+                        <h2>Learn More</h2>
+                    </Link>
+                </Circle>
+            </ContainerA>
 
             <ContainerLarge>
                 <h1>&lt; Selected</h1>
@@ -55,7 +71,7 @@ const Homepage = () => {
                     <Col style={{
                         transform: `translateY(${offesetY * 0.08}px)`,
                     }}>
-                        <Link to='/project/1'>
+                        <Link href='/project/1'>
                             <Project height="60vh" image="/images/1.jpg" position='left' name='Dev.to Clone' type="WebApp" />
                         </Link>
                     </Col>
@@ -100,31 +116,23 @@ const Homepage = () => {
                             <Project height="50vh" image="/images/4.jpg" position='left' name='Portfolio 2021' type="WebSite" />
                         </Link>
                     </Col>
-
                 </Row>
-            </ContainerLarge>
-
-            <ContainerA>
-                <Design>
-                    <h1 data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">Mukul Rajpoot</h1>
-                    <h2 data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">&lt;About /&gt;</h2>
-                </Design>
                 <Circle data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
                     <Link to="/about">
-                        <h2>About Me</h2>
+                        <h2>View All</h2>
                     </Link>
                 </Circle>
-                <h3 data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">I am a full-stack creative developer based in Barielly, India. I am a Computer Science undergraduate from Chandigarh University and also did some coursework in Designing and Visual Arts.</h3>
-                <h4 data-aos="fade-up" data-aos-delay="450" data-aos-duration="1000"> I enjoy using my skill-set to empower people to accomplish their goals.
-                    My development stack is focused on building incredible fast websites and WebApps with delightful interactions.</h4>
-            </ContainerA>
+            </ContainerLarge>
 
             <Container3>
                 <Wrapper>
-                    <h1 data-aos="fade-in" data-aos-duration="2000">I’m currently available for freelance projects. <span>Let’s work together</span> to create something worth sharing.
+                    <h1 data-aos="fade-in" data-aos-duration="2000">I’m available from <span>October</span> for freelance projects. <span>Let’s work together</span> to create something worth sharing.
                     </h1>
-                    <BG data-aos="zoom-in" data-aos-duration="2000" style={{ backgroundColor: 'rgb(49,196,140, 0.2)', top: '10%', left: '60%' }}></BG>
+                    <BG data-aos="zoom-in" data-aos-duration="2000" style={{ backgroundColor: 'rgb(49,196,140, 0.2)', top: '15%', left: '60%' }}></BG>
                     <img data-aos="zoom-in" data-aos-duration="2000" src="/images/pose/pose_m13.png" alt="" />
+                    <Link to="/contact">
+                        <Button text="Connect Now" color="var(--green)" />
+                    </Link>
                 </Wrapper>
             </Container3>
 
@@ -158,30 +166,23 @@ const Homepage = () => {
                     </Col>
                 </Row>
             </Container> */}
-
-            {/* <Main>
-                <Container3>
-                    <h1>Do What you <span>Love ❤</span></h1>
-                    <img src="/images/pose/pose_m19.png" alt="" className="third" />
-                    <img src="/images/pose/pose_m21.png" alt="" className="second" />
-                </Container3>
-            </Main> */}
         </Home>
     )
 }
 
 const Circle = styled.div`
     display: flex;
+    margin-left: auto;
     align-items: center;
     justify-content: center;
-    height: 10rem;
-    width: 10rem;
+    height: 15rem;
+    width: 15rem;
     border-radius: 50%;
     background-color: #191919;
 
     & > a > h2 {
         color: #fff;
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: 600;
         cursor: pointer;
         transition: all .2s ease-in-out;
@@ -297,6 +298,11 @@ const ContainerA = styled.div`
         font-weight: 400;
         font-size: 3rem;
 
+        & > span {
+            color: var(--darkYellow);
+            font-weight: 600;
+        }
+
         @media (max-width: 768px) {
             margin: 2rem 0;
             width: 90%;
@@ -363,73 +369,14 @@ const Design = styled.div`
     }
 `
 const Container3 = styled(Container)`
-    width: 100%;
-    height: 90vh;
+    width: 80%;
+    height: 110vh;
     position: relative;
     margin: 0 auto;
-    padding: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    & > h1 {
-        font-size: 10rem;
-        font-weight: 900;
-        text-transform: uppercase;
-        z-index: -3;
-    }
-
-    & > .first {
-        position: absolute;
-        width: 50%;
-        height: auto;
-        left: 10%;
-        z-index: -2;
-
-        @media (max-width: 768px) {
-            width: 80%;
-        }
-    }
-
-    & > .back1 {
-        position: absolute;
-        width: 50%;
-        height: auto;
-        left: 10%;
-        z-index: -4;
-    }
-
-    & > .back2 {
-        position: absolute;
-        width: 30%;
-        height: auto;
-        left: 50%;
-        z-index: -4;
-    }
-
-    & > .second {
-        position: absolute;
-        width: 50%;
-        height: auto;
-        left: 100%;
-        z-index: -2;
-
-        @media (max-width: 768px) {
-            width: 80%;
-        }
-    }
-
-    & > .third {
-        position: absolute;
-        width: 50%;
-        height: auto;
-        left: -20%;
-        z-index: -2;
-
-        @media (max-width: 768px) {
-            width: 80%;
-        }
-    }
 `
 
 
@@ -438,17 +385,13 @@ const Wrapper = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
+    align-items: flex-start;
     justify-content: center;
-    align-items: center;
-
-    & > h3 {
-        margin-left: auto;
-        font-size: 3rem;
-    }
+    flex-direction: column;
 
     & > img {
         position: absolute;
-        top: 10%;
+        top: 15%;
         left: 80%;
         height: auto;
         width: 50%;
@@ -460,8 +403,9 @@ const Wrapper = styled.div`
     }
 
     & > h1 {
+        max-width: 70%;
         color: #191919;
-        font-size: 7rem;
+        font-size: 5rem;
         font-weight: 300;
 
         & >  span {
@@ -483,19 +427,31 @@ const LeftHero = styled.div`
     position: relative;
 
     & > h1 {
-        font-size: 5rem;
+        font-size: 3rem;
         background-color: var(--dark);
-        color: var(--white);
+        color: #fff;
         font-family: 'Otomanopee One', sans-serif;
         padding: .1rem 1rem;
-        margin: 2rem 0;
+        margin: 1rem 0;
         font-family: 'Dela Gothic One', cursive;
+    }
+
+    & > h2 {
+        font-size: 2rem;
+        font-family: 'Otomanopee One', sans-serif;
+        font-family: 'Dela Gothic One', cursive;
+        margin: 1rem 0;
     }
 
     & > h3 {
         font-family: 'Dela Gothic One', cursive;
         text-transform: uppercase;
-        font-size: 6rem;
+        font-size: 7rem;
+        max-width: 70%;
+
+        & > span {
+            color: var(--red)
+        }
         /* -webkit-text-stroke-width: 1px; */
         /* color: transparent; */
         /* -webkit-text-stroke-color: #000; */
@@ -509,8 +465,8 @@ const LeftHero = styled.div`
         left: 70%;
         z-index: -2;
 
-        @media (max-width: 768px) {
-            width: 80%;
+        @media (max-width: 769px) {
+            width: 50%;
         }
     }
 

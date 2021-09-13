@@ -97,18 +97,18 @@ const Burger = styled.div`
     width: 100%;
 
     & > .menu-secondary-background-color {
-      background: var(--green);
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      position: fixed;
-      height: 100%;
-      width: 100%;
-      z-index: -1;
+        background: var(--yellow);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
     }
     & > .menu-tertiary-background-color {
-      background: var(--yellow);
+      background: var(--lightRed);
       top: 0;
       left: 0;
       right: 0;

@@ -24,34 +24,38 @@ const Workpage = () => {
                 <Row>
                     <Col>
                         <Link to="/project/7">
-                            <Moreproject name="TrackIt" />
+                            <Moreproject name="TrackIt" id={7} />
                         </Link>
                         <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
                         <Link to="/project/6">
-                            <Moreproject name="Portfolio 2019" />
+                            <Moreproject name="Portfolio 2019" id={6} />
                         </Link>
                         <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
                         <Link to="/project/8">
-                            <Moreproject name="Bankist" />
+                            <Moreproject name="Bankist" id={8} />
                         </Link>
                         <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
                         <Link to="/project/2">
-                            <Moreproject name="TrackerX" />
+                            <Moreproject name="TrackerX" id={2} />
                         </Link>
                     </Col>
                     <Col>
                         <Link to="/project/1">
-                            <Moreproject name="Dev.to Clone" />
+                            <Moreproject name="Dev.to Clone" id={1} />
                         </Link>
                         <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
                         <Link to="/project/5">
-                            <Moreproject name="NetFlix Clone" />
+                            <Moreproject name="NetFlix Clone" id={5} />
                         </Link>
                         <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
                         <Link to="/project/4">
-                            <Moreproject name="Portflio 2021" />
+                            <Moreproject name="Portflio 2021" id={4} />
                         </Link>
                         <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
+                        <Link to="/project/3">
+                            <Moreproject name="devFriend.io" id={3} />
+                        </Link>
+
                     </Col>
                 </Row>
             </Container>

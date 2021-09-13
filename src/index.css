@@ -31,9 +31,11 @@ html {
 }
 
 :root {
-  --red: #fa442d;
+  --red: #f44336;
+  --lightRed: #feecea;
   --dark: #191919;
   --yellow: #f8e08e;
+  --darkYellow: #f8d76a;
   --green: #31c48c;
   --white: #f2efe7;
   --blue: royalBlue;

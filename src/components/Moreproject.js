@@ -2,8 +2,12 @@ import React, { useEffect } from 'react'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import styled from 'styled-components'
+import PROJECTS_DATA from '../projects.data'
 
-const Moreproject = ({ height, name }) => {
+const Moreproject = ({ name, id }) => {
+
+    const data = PROJECTS_DATA.find((e) => e.id == id)
+    console.log(data)
 
     useEffect(() => {
         Aos.init({ duration: 2000 })
@@ -11,10 +15,10 @@ const Moreproject = ({ height, name }) => {
 
     return (
         <>
-            <Wrapper data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+            <Wrapper data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" image={data.image}>
                 <Info>
+                    <h2>{data.type}</h2>
                     <h1>{name}</h1>
-                    <h2>Website</h2>
                 </Info>
                 <Circle>
                     <h2>Let's Visit</h2>
@@ -32,6 +36,12 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 1s ease-in-out;
+
+    &:hover {
+        background: url(${props => props.image});
+    }
+
 `
 const Info = styled.div`
     & > h1 {

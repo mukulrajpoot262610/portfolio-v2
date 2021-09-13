@@ -90,11 +90,12 @@ const Container = styled.div`
     overflow: hidden;
 
     & > span > a {
-        font-size: 4rem;
+        font-size: 5rem;
         text-decoration: none;
         color: #191919;
 
         &:hover {
+            text-decoration: underline;
             color: var(--yellow);
         }
     }

@@ -12,15 +12,15 @@ const Projectpage = () => {
     const [offesetY, setOffsetY] = useState(0);
 
     const handleScroll = () => {
-        if (isMobile) {
-            setOffsetY(0);
-        } else {
-            setOffsetY(window.pageYOffset);
-        }
+        // if (isMobile) {
+        //     setOffsetY(0);
+        // } else {
+        // }
+        setOffsetY(window.pageYOffset);
     };
 
     useEffect(() => {
-        window.scrollTo(0, 0)
+        // window.scrollTo(0, 0)
         setProject(PROJECTS_DATA.find((e) => e.id === Number(id)))
         window.addEventListener("scroll", handleScroll);
 
@@ -56,7 +56,7 @@ const Projectpage = () => {
                         </a>
                     </div>
                     <div>
-                        <h1>project && Project Date</h1>
+                        <h1>Project Date</h1>
                         <h2>{project && project.date}</h2>
                     </div>
                 </ProjectContact>
@@ -81,23 +81,23 @@ const Projectpage = () => {
                     </Col>
                     <Col>
                         <Link to="/project/1">
-                            <Moreproject name="Dev.to Clone" />
+                            <Moreproject name="Dev.to Clone" id={1} />
                         </Link>
                         <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
                         <Link to="/project/6">
-                            <Moreproject name="Portfolio 2019" />
+                            <Moreproject name="Portfolio 2019" id={6} />
                         </Link>
                         <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
                         <Link to="/project/8">
-                            <Moreproject name="Bankist" />
+                            <Moreproject name="Bankist" id={8} />
                         </Link>
                         <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
                         <Link to="/project/5">
-                            <Moreproject name="Netflix Clone" />
+                            <Moreproject name="Netflix Clone" id={5} />
                         </Link>
                         <hr data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" />
                         <Link to="/project/2">
-                            <Moreproject name="TrackerX" />
+                            <Moreproject name="TrackerX" id={2} />
                         </Link>
                     </Col>
                 </Row>
@@ -232,11 +232,7 @@ const Circle = styled.div`
     }
 
     & > span {
-        font-size: 2rem;
-    }
-
-    & > i {
-        font-size: 3.5rem;
+        font-size: 1.5rem;
     }
 `
 

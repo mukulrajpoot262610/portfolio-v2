@@ -9,28 +9,47 @@ import Contactbar from './components/Contactbar';
 import ImageReveal from './components/ImageReveal';
 import Footer from './components/Footer';
 import AnimatedCursor from "react-animated-cursor"
+import { useEffect, useState } from 'react';
+import Loader from './components/Loader';
 
 function App() {
+
+  const [loader, setLoader] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoader(false)
+    }, 2000)
+  }, [])
+
   return (
     <Router>
-      <Navbar />
-      <AnimatedCursor
-        innerSize={16}
-        outerSize={54}
-        color='10, 10, 10'
-        outerAlpha={0.2}
-        innerScale={0.7}
-        outerScale={4} />
-      <Contactbar />
-      <Switch>
-        <Route exact path="/" component={Homepage} />
-        <Route exact path="/work" component={Workpage} />
-        <Route exact path="/about" component={Aboutpage} />
-        <Route exact path="/contact" component={Contactpage} />
-        <Route exact path="/project/:id" component={Projectpage} />
-        <Route exact path="/image" component={ImageReveal} />
-      </Switch>
-      <Footer />
+      {
+        loader ? (
+          <Loader />
+        ) : (
+          <>
+            <Navbar />
+            <AnimatedCursor
+              innerSize={16}
+              outerSize={54}
+              color='10, 10, 10'
+              outerAlpha={0.2}
+              innerScale={0.7}
+              outerScale={4} />
+            <Contactbar />
+            <Switch>
+              <Route exact path="/" component={Homepage} />
+              <Route exact path="/work" component={Workpage} />
+              <Route exact path="/about" component={Aboutpage} />
+              <Route exact path="/contact" component={Contactpage} />
+              <Route exact path="/project/:id" component={Projectpage} />
+              <Route exact path="/image" component={ImageReveal} />
+            </Switch>
+            <Footer />
+          </>
+        )
+      }
     </Router>
   );
 }

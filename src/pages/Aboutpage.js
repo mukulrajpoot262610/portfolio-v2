@@ -8,8 +8,7 @@ const Aboutpage = () => {
     const [time, setTime] = useState(1000)
 
     useEffect(() => {
-        window.scrollTo(0, 0)
-        Aos.init({ duration: 2000 })
+        // window.scrollTo(0, 0)
         if (window.location.pathname === '/') {
             setTime(100)
         }
@@ -23,10 +22,10 @@ const Aboutpage = () => {
                     <h1 data-aos="fade-left" data-aos-delay={time} data-aos-duration="1000">Mukul Rajpoot</h1>
                     <h2 data-aos="fade-right" data-aos-delay={time} data-aos-duration="1000">&lt;About /&gt;</h2>
                     <img src="/images/pose/pose_m12.png" alt="" />
-                    <BG style={{ backgroundColor: 'rgb(248,224,142, 0.3)', top: '0%', left: '55%' }}></BG>
                 </Design>
+                <BG style={{ backgroundColor: 'rgb(248,224,142, 0.3)', top: '0%', left: '60%' }}></BG>
                 <h3 data-aos="fade-up" data-aos-delay={2 * time} data-aos-duration="1000">I am a full-stack creative developer based in Barielly, <span>India</span>. I am a Computer Science graduate and did some coursework to the awesome world of designing digital interfaces and products.</h3>
-                <h4 data-aos="fade-up" data-aos-delay={2.5 * time} data-aos-duration="1000"> I enjoy using my skill-set to empower people to accomplish their goals.
+                <h4 data-aos="fade-up" data-aos-duration="1000"> I enjoy using my skill-set to empower people to accomplish their goals.
                     My development stack is focused on performance & accessibility with delightful interactions. I create lighting fast WebApps and Websites using <span>MERN</span> Stack with the help of NextJS.</h4>
             </Container>
 
@@ -39,19 +38,19 @@ const Aboutpage = () => {
                 </Design2>
                 <ToolBox>
                     <Circle data-aos="zoom-in" data-aos-delay="3500" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
-                        <i className="fab fa-html5"></i>
+                        <img src="/images/html5.svg" alt="" />
                         <span>HTML</span>
                     </Circle>
                     <Circle data-aos="zoom-in" data-aos-delay="3700" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
-                        <i className="fab fa-css3-alt"></i>
+                        <img src="/images/css.svg" alt="" />
                         <span>CSS</span>
                     </Circle>
                     <Circle data-aos="zoom-in" data-aos-delay="3900" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
-                        <i className="fab fa-sass"></i>
+                        <img src="/images/sass.svg" alt="" />
                         <span>SASS</span>
                     </Circle>
                     <Circle data-aos="zoom-in" data-aos-delay="3700" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
-                        <i className="fab fa-react"></i>
+                        <img src="/images/react.svg" alt="" />
                         <span>REACT</span>
                     </Circle>
                     <Circle data-aos="zoom-in" data-aos-delay="3700" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
@@ -59,19 +58,23 @@ const Aboutpage = () => {
                         <span>REDUX</span>
                     </Circle>
                     <Circle data-aos="zoom-in" data-aos-delay="4100" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
-                        <i className="fab fa-node-js"></i>
+                        <img src="/images/nodejs.svg" alt="" />
                         <span>NODEJS</span>
                     </Circle>
+                    <Circle data-aos="zoom-in" data-aos-delay="4100" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
+                        <img src="/images/expressjs.svg" alt="" />
+                        <span>EXPRESSJS</span>
+                    </Circle>
                     <Circle data-aos="zoom-in" data-aos-delay="4300" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
-                        <i className="fab fa-shopify"></i>
+                        <img src="/images/shopify.svg" alt="" />
                         <span>SHOPIFY</span>
                     </Circle>
                     <Circle data-aos="zoom-in" data-aos-delay="4500" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
-                        <i className="fab fa-js-square"></i>
+                        <img src="/images/javascript.svg" alt="" />
                         <span>JS</span>
                     </Circle>
                     <Circle data-aos="zoom-in" data-aos-delay="4700" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
-                        <i className="fas fa-database"></i>
+                        <img src="/images/mongodb.svg" alt="" />
                         <span>MONGODB</span>
                     </Circle>
                     <Circle data-aos="zoom-in" data-aos-delay="4700" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
@@ -79,19 +82,11 @@ const Aboutpage = () => {
                         <span>NEXTJS</span>
                     </Circle>
                     <Circle data-aos="zoom-in" data-aos-delay="4900" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
-                        <i className="fab fa-bootstrap"></i>
+                        <img src="/images/getbootstrap.svg" alt="" />
                         <span>BOOTSTRAP</span>
                     </Circle>
-                    <Circle data-aos="zoom-in" data-aos-delay="5100" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
-                        <i class="fab fa-wordpress"></i>
-                        <span>WORDPRESS</span>
-                    </Circle>
-                    <Circle data-aos="zoom-in" data-aos-delay="5300" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
-                        <i className="fab fa-figma"></i>
-                        <span>FIGMA</span>
-                    </Circle>
                     <Circle data-aos="zoom-in" data-aos-delay="5500" data-aos-duration="1000" style={{ backgroundColor: "#E5F1F8" }}>
-                        <img src="/images/firebase.svg" style={{ width: '30%' }} alt="" />
+                        <img src="/images/firebase.svg" alt="" />
                         <span>Firebase</span>
                     </Circle>
                 </ToolBox>
@@ -108,7 +103,7 @@ const Aboutpage = () => {
                 <h4 data-aos="fade-right" data-aos-duration="1000" style={{ marginBottom: '2rem' }}>I’ve spent many years trying to perfect what I do and while I’ll never be perfect, I do my best to come close.</h4>
                 <h3 data-aos="fade-left" data-aos-duration="1000">If you’ve got a project you’d like to work on with me just get in touch and we can get to work!</h3>
             </Container>
-        </About>
+        </About >
     )
 }
 
@@ -125,19 +120,20 @@ const Circle = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 9vh;
-    width: 9vh;
+    height: 13rem;
+    width: 13rem;
     border-radius: 50%;
     cursor: pointer;
     transition: all .2s ease-in-out;
 
     & > img {
         height: auto;
-        width: 50%;
+        width: 30%;
     }
 
     & > span {
-        font-size: 1rem;
+        font-size: 1.5rem;
+        font-weight: 400;
     }
 
     & > i {
