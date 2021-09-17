@@ -71,7 +71,7 @@ const Homepage = () => {
                     <Col style={{
                         transform: `translateY(${offesetY * 0.08}px)`,
                     }}>
-                        <Link href='/project/1'>
+                        <Link to='/project/1'>
                             <Project height="60vh" image="/images/1.jpg" position='left' name='Dev.to Clone' type="WebApp" />
                         </Link>
                     </Col>
